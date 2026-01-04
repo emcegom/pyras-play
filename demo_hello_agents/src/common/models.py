@@ -24,3 +24,10 @@ def build_openapi_client(config: LLMConfig) -> OpenAI:
         api_key=config.api_key, base_url=config.base_url, timeout=config.timeout
     )
     return client
+
+
+@dataclass
+class Configuration:
+    search_api_key: str = field(default_factory=lambda: os.getenv("SEARCH_API_KEY"))
+
+configuration = Configuration()

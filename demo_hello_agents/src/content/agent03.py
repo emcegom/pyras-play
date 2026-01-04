@@ -1,6 +1,6 @@
 from typing import Dict, List
-from src.agent.models import LLMConfig
-from src.agent.utils import build_openapi_client
+
+from demo_hello_agents.src.common.models import LLMConfig, build_openapi_client
 
 
 class HelloAgentsLLM:
